@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#111110">
+  <meta name="description" content="«Прецедент» — кафе для тих, хто цінує якісну каву, тишу та діловий настрій. Переговорні, швидкі ланчі й Wi-Fi біля кожного столика.">
+  <title>Прецедент — кава, яка виграє справи</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Індикатор прокручування сторінки -->
+  <div class="scroll-progress" aria-hidden="true"><span id="scroll-progress"></span></div>
+
+  <!-- Липка шапка з навігацією та мобільним меню -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#home" aria-label="Прецедент — на головну">
+        <span class="brand-mark" aria-hidden="true">§</span>
+        <span class="brand-name">ПРЕЦЕДЕНТ<small>КАВА · СПРАВИ · ТИША</small></span>
+      </a>
+      <button class="menu-toggle" type="button" aria-label="Відкрити меню" aria-expanded="false" aria-controls="primary-nav">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="primary-nav" id="primary-nav" aria-label="Головна навігація">
+        <a href="#about">Про нас</a>
+        <a href="#menu">Меню</a>
+        <a href="#spaces">Простір</a>
+        <a href="#reviews">Відгуки</a>
+        <a class="nav-cta" href="#booking">Забронювати <span aria-hidden="true">↗</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Головний екран з анімованим градієнтом і світлом курсора -->
+    <section class="hero" id="home" aria-labelledby="hero-title">
+      <div class="hero-glow" aria-hidden="true"></div>
+      <div class="hero-grain" aria-hidden="true"></div>
+      <span class="floating-mark mark-one" aria-hidden="true">✦</span>
+      <span class="floating-mark mark-two" aria-hidden="true">§</span>
+      <span class="floating-mark mark-three" aria-hidden="true">☕</span>
+      <div class="container hero-content">
+        <p class="eyebrow"><span></span> КАВА ДЛЯ ТИХ, ХТО ЗНАЄ ЦІНУ АРГУМЕНТАМ</p>
+        <h1 id="hero-title">Ваш простір.<br><em>Ваші правила.</em></h1>
+        <p class="hero-subtitle" id="hero-subtitle" data-text="Кава, яка виграє справи. А тиша допомагає знайти потрібний аргумент.">Кава, яка виграє справи. А тиша допомагає знайти потрібний аргумент.</p>
+        <div class="hero-actions">
+          <a class="button button-gold" href="#booking">Забронювати столик <span aria-hidden="true">↗</span></a>
+          <a class="text-link" href="#menu">Переглянути меню <span aria-hidden="true">↓</span></a>
+        </div>
+        <div class="hero-note"><span class="note-line"></span><span>Тут навіть дедлайни звучать тихіше.</span></div>
+      </div>
+      <div class="hero-side-label" aria-hidden="true">КИЇВ · ВІДКРИТО ЩОДНЯ</div>
+    </section>
+
+    <!-- Коротка історія кафе та анімовані показники -->
+    <section class="section about-section" id="about">
+      <div class="container about-grid">
+        <div class="section-heading reveal">
+          <p class="eyebrow"><span></span> НАША ФІЛОСОФІЯ</p>
+          <h2>Справи почекають.<br><em>Кава — ні.</em></h2>
+        </div>
+        <div class="about-copy reveal">
+          <p class="lead">Ми створили «Прецедент» для людей, у яких навіть перерва має бути продуктивною.</p>
+          <p>Тут можна допрацювати позицію до засідання, провести переговори без зайвих свідків і встигнути на обід між двома слуханнями. Без метушні, зате з чудовою кавою.</p>
+          <a class="text-link" href="#spaces">Знайти своє місце <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+      <div class="container stats-grid">
+        <div class="stat-card reveal"><span class="stat-number" data-count="120">0</span><span class="stat-plus">+</span><span class="stat-label">страв і напоїв у справі</span></div>
+        <div class="stat-card reveal"><span class="stat-number" data-count="5">0</span><span class="stat-label">переговорних кімнат</span></div>
+        <div class="stat-card reveal"><span class="stat-number" data-count="365">0</span><span class="stat-label">днів на рік на вашому боці</span></div>
+      </div>
+    </section>
+
+    <!-- Меню з категоріями та картками страв -->
+    <section class="section menu-section" id="menu">
+      <div class="container">
+        <div class="section-heading centered reveal">
+          <p class="eyebrow"><span></span> МЕНЮ БЕЗ ЗАЙВИХ СЛІВ</p>
+          <h2>Смачно. <em>По суті.</em></h2>
+          <p class="section-intro">Кожна позиція — аргумент на користь ще однієї перерви.</p>
+        </div>
+        <div class="menu-filters reveal" role="group" aria-label="Фільтр меню за категоріями">
+          <button class="filter-button is-active" type="button" data-filter="all" aria-pressed="true">Усе меню</button>
+          <button class="filter-button" type="button" data-filter="coffee" aria-pressed="false">Кава</button>
+          <button class="filter-button" type="button" data-filter="dessert" aria-pressed="false">Десерти</button>
+          <button class="filter-button" type="button" data-filter="lunch" aria-pressed="false">Обіди</button>
+        </div>
+        <div class="menu-grid">
+          <article class="menu-card reveal" data-category="coffee">
+            <div class="menu-card-top"><span class="menu-emoji" aria-hidden="true">☕</span><span class="menu-price">65 ₴</span></div>
+            <p class="menu-category">КАВА · 30 МЛ</p><h3>Еспресо «Позов»</h3><p>Коротко, міцно, по суті. Без права на відмову.</p>
+          </article>
+          <article class="menu-card reveal" data-category="coffee">
+            <div class="menu-card-top"><span class="menu-emoji" aria-hidden="true">☕</span><span class="menu-price">95 ₴</span></div>
+            <p class="menu-category">КАВА · 250 МЛ</p><h3>Капучино «Мирова угода»</h3><p>Ідеальний баланс молока й еспресо. Усі сторони задоволені.</p>
+          </article>
+          <article class="menu-card reveal" data-category="coffee">
+            <div class="menu-card-top"><span class="menu-emoji" aria-hidden="true">🧊</span><span class="menu-price">110 ₴</span></div>
+            <p class="menu-category">КАВА · 300 МЛ</p><h3>Флет-вайт «Апеляція»</h3><p>Подвійна сила для тих, хто не згоден із ранком.</p>
+          </article>
+          <article class="menu-card reveal" data-category="dessert">
+            <div class="menu-card-top"><span class="menu-emoji" aria-hidden="true">🍰</span><span class="menu-price">145 ₴</span></div>
+            <p class="menu-category">ДЕСЕРТ · 150 Г</p><h3>Чізкейк «Прецедент»</h3><p>Переконливий доказ того, що солодке — це необхідність.</p>
+          </article>
+          <article class="menu-card reveal" data-category="dessert">
+            <div class="menu-card-top"><span class="menu-emoji" aria-hidden="true">🍵</span><span class="menu-price">85 ₴</span></div>
+            <p class="menu-category">ЧАЙ · 400 МЛ</p><h3>Чай «Відстрочка»</h3><p>Тепла пауза, коли справи можуть зачекати ще п'ять хвилин.</p>
+          </article>
+          <article class="menu-card reveal" data-category="lunch">
+            <div class="menu-card-top"><span class="menu-emoji" aria-hidden="true">🥪</span><span class="menu-price">185 ₴</span></div>
+            <p class="menu-category">ЛАНЧ · 280 Г</p><h3>Сендвіч «Клопотання»</h3><p>Ситний, переконливий і подається без зволікань.</p>
+          </article>
+          <article class="menu-card reveal" data-category="lunch">
+            <div class="menu-card-top"><span class="menu-emoji" aria-hidden="true">🥗</span><span class="menu-price">265 ₴</span></div>
+            <p class="menu-category">ЛАНЧ · 350 Г</p><h3>Боул «Зустрічний позов»</h3><p>Кіноа, овочі й лосось. Сильна позиція на обід.</p>
+          </article>
+          <article class="menu-card reveal" data-category="dessert">
+            <div class="menu-card-top"><span class="menu-emoji" aria-hidden="true">🍮</span><span class="menu-price">125 ₴</span></div>
+            <p class="menu-category">ДЕСЕРТ · 140 Г</p><h3>Тарт «Золота середина»</h3><p>Ніжна карамель і сіль. Компроміс, що смакує бездоганно.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Опис зон кафе та доступних умов -->
+    <section class="section spaces-section" id="spaces">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow"><span></span> ПРОСТІР ДЛЯ ВАШИХ СПРАВ</p>
+          <h2>Обирайте місце.<br><em>Ми подбали про решту.</em></h2>
+        </div>
+        <div class="spaces-grid">
+          <article class="space-card space-main reveal">
+            <div class="space-illustration illustration-hall" aria-hidden="true"><span>☕</span><i></i><b></b></div>
+            <div class="space-info"><span class="space-index">01 / ЗАЛ</span><h3>Загальний зал</h3><p>Ділові зустрічі, швидка кава й розетки біля кожного столика.</p><span class="space-meta">Wi-Fi · РОЗЕТКИ · 42 МІСЦЯ</span></div>
+          </article>
+          <article class="space-card reveal">
+            <div class="space-illustration illustration-quiet" aria-hidden="true"><span>📖</span><i></i><b></b></div>
+            <div class="space-info"><span class="space-index">02 / ТИША</span><h3>Тиха зона</h3><p>Зосереджена підготовка до справи. Розмови — тільки пошепки.</p><span class="space-meta">ТИША · РОЗЕТКИ · 18 МІСЦЬ</span></div>
+          </article>
+          <article class="space-card reveal">
+            <div class="space-illustration illustration-meeting" aria-hidden="true"><span>⚖️</span><i></i><b></b></div>
+            <div class="space-info"><span class="space-index">03 / ПЕРЕГОВОРИ</span><h3>Переговорні кімнати</h3><p>П'ять приватних кімнат для зустрічей, які краще залишити між вами.</p><a class="space-link" href="#booking">Забронювати кімнату <span aria-hidden="true">↗</span></a></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Ключові переваги для гостей кафе -->
+    <section class="section benefits-section">
+      <div class="container benefits-layout">
+        <div class="section-heading reveal">
+          <p class="eyebrow"><span></span> ВАШІ ПЕРЕВАГИ</p>
+          <h2>Порядок у справах.<br><em>І в деталях.</em></h2>
+          <p class="section-intro">Ми розуміємо ваш графік. Навіть якщо його щойно змінили.</p>
+        </div>
+        <div class="benefits-list">
+          <article class="benefit-item reveal"><span class="benefit-icon" aria-hidden="true">↗</span><div><h3>Ланч без зволікань</h3><p>Обід подамо швидко — у вас ще є час на аргументи.</p></div><span class="benefit-number">01</span></article>
+          <article class="benefit-item reveal"><span class="benefit-icon" aria-hidden="true">◉</span><div><h3>Тиша за правилами</h3><p>Окрема зона для підготовки, де чути тільки ваші думки.</p></div><span class="benefit-number">02</span></article>
+          <article class="benefit-item reveal"><span class="benefit-icon" aria-hidden="true">▤</span><div><h3>Переговорні на вашому боці</h3><p>Бронюйте кімнату для зустрічі — конфіденційність включено.</p></div><span class="benefit-number">03</span></article>
+          <article class="benefit-item reveal"><span class="benefit-icon" aria-hidden="true">⌁</span><div><h3>Робоче місце готове</h3><p>Wi-Fi і розетка біля кожного столика. Заряджені всі сторони.</p></div><span class="benefit-number">04</span></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Відгуки гостей -->
+    <section class="section reviews-section" id="reviews">
+      <div class="container">
+        <div class="section-heading centered reveal">
+          <p class="eyebrow"><span></span> СЛОВО НАШИМ ГОСТЯМ</p>
+          <h2>Схвалено <em>стороною захисту.</em></h2>
+        </div>
+        <div class="reviews-grid">
+          <figure class="review-card reveal"><div class="review-stars" aria-label="5 з 5 зірок">★★★★★</div><blockquote>«Нарешті місце, де можна перечитати справу, а не меню шуму. Кава — бездоганний доказ.»</blockquote><figcaption><span class="review-avatar" aria-hidden="true">ОК</span><span><strong>Олександр Коваль</strong><small>Адвокат · гість із 2022 року</small></span></figcaption></figure>
+          <figure class="review-card reveal"><div class="review-stars" aria-label="5 з 5 зірок">★★★★★</div><blockquote>«Готуюсь тут до іспитів, бо вдома мене постійно викликають на кухню. Чізкейк — мій співучасник.»</blockquote><figcaption><span class="review-avatar" aria-hidden="true">МЛ</span><span><strong>Марія Левченко</strong><small>Студентка-правниця</small></span></figcaption></figure>
+          <figure class="review-card reveal"><div class="review-stars" aria-label="5 з 5 зірок">★★★★★</div><blockquote>«Переговорна зручна, персонал тактовний. Жодного зайвого свідка — крім чудового капучино.»</blockquote><figcaption><span class="review-avatar" aria-hidden="true">ІС</span><span><strong>Ірина Савчук</strong><small>Нотаріус · постійна гостя</small></span></figcaption></figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- Акційна пропозиція для обіду та студентів -->
+    <section class="offer-section">
+      <div class="container offer-card reveal">
+        <div class="offer-stamp" aria-hidden="true">10<small>%</small></div>
+        <div class="offer-copy"><p class="eyebrow"><span></span> СПРАВЕДЛИВІ УМОВИ</p><h2>Обід — у перерві.<br><em>Знижка — у вашій справі.</em></h2><p>Бізнес-ланч щодня з 12:00 до 15:00. Студентам-правникам — знижка 10% за студентським квитком.</p></div>
+        <a class="button button-outline" href="#booking">Зайняти місце <span aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+
+    <!-- Форма бронювання з полями для контактів і вибору зони -->
+    <section class="section booking-section" id="booking">
+      <div class="container booking-layout">
+        <div class="section-heading reveal">
+          <p class="eyebrow"><span></span> ВАШ СТІЛИК ЧЕКАЄ</p>
+          <h2>Забронюйте<br><em>свою тишу.</em></h2>
+          <p class="section-intro">Залиште деталі — ми підтвердимо бронювання телефоном. Зазвичай швидше, ніж призначають слухання.</p>
+          <div class="booking-contact"><span aria-hidden="true">◷</span><span>Щодня, 08:00–22:00<br><small>вул. Хрещатик, 22 · Київ</small></span></div>
+        </div>
+        <form class="booking-form reveal" id="booking-form" novalidate>
+          <div class="form-row">
+            <div class="form-field"><label for="guest-name">Ваше ім'я</label><input id="guest-name" name="name" type="text" autocomplete="name" placeholder="Наприклад, Олена" required aria-describedby="name-error"><small class="field-error" id="name-error"></small></div>
+            <div class="form-field"><label for="guest-phone">Номер телефону</label><input id="guest-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="+380 00 000 00 00" required aria-describedby="phone-error"><small class="field-error" id="phone-error"></small></div>
+          </div>
+          <div class="form-row">
+            <div class="form-field"><label for="booking-date">Дата</label><input id="booking-date" name="date" type="date" required aria-describedby="date-error"><small class="field-error" id="date-error"></small></div>
+            <div class="form-field"><label for="booking-time">Час</label><input id="booking-time" name="time" type="time" min="08:00" max="21:30" required aria-describedby="time-error"><small class="field-error" id="time-error"></small></div>
+          </div>
+          <div class="form-row">
+            <div class="form-field"><label for="guest-count">Кількість гостей</label><select id="guest-count" name="guests" required aria-describedby="guests-error"><option value="">Оберіть кількість</option><option value="1">1 гість</option><option value="2">2 гості</option><option value="3">3 гості</option><option value="4">4 гості</option><option value="5">5 гостей</option><option value="6">6 гостей</option></select><small class="field-error" id="guests-error"></small></div>
+            <div class="form-field"><label for="booking-zone">Тип зони</label><select id="booking-zone" name="zone" required aria-describedby="zone-error"><option value="">Оберіть зону</option><option value="Загальний зал">Загальний зал</option><option value="Тиха зона">Тиха зона</option><option value="Переговорна кімната">Переговорна кімната</option></select><small class="field-error" id="zone-error"></small></div>
+          </div>
+          <button class="button button-gold form-submit" type="submit">Надіслати запит <span aria-hidden="true">↗</span></button>
+          <p class="form-success" id="form-success" role="status" aria-live="polite"></p>
+          <p class="form-disclaimer">Натискаючи кнопку, ви погоджуєтесь, що ми зателефонуємо для підтвердження.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Контактна інформація та посилання на соцмережі -->
+  <footer class="site-footer">
+    <div class="container footer-main">
+      <a class="brand footer-brand" href="#home" aria-label="Прецедент — нагору"><span class="brand-mark" aria-hidden="true">§</span><span class="brand-name">ПРЕЦЕДЕНТ<small>КАВА · СПРАВИ · ТИША</small></span></a>
+      <p class="footer-tagline">Кава, яка виграє справи.<br><em>І робить паузу смачною.</em></p>
+      <div class="footer-details"><div><span class="footer-label">ЗНАЙДЕТЕ НАС</span><p>вул. Хрещатик, 22<br>Київ, Україна</p></div><div><span class="footer-label">ГОДИНИ РОБОТИ</span><p>Щодня<br>08:00 — 22:00</p></div><div><span class="footer-label">БУДЬМО НА ЗВ'ЯЗКУ</span><p><a href="https://instagram.com/" target="_blank" rel="noopener noreferrer">Instagram ↗</a><br><a href="https://facebook.com/" target="_blank" rel="noopener noreferrer">Facebook ↗</a></p></div></div>
+    </div>
+    <div class="container footer-bottom"><span>© 2026 «Прецедент». Усі права захищені.</span><span>Зроблено з повагою до ваших аргументів.</span></div>
+  </footer>
+
+  <!-- Кнопка швидкого повернення на початок -->
+  <button class="back-to-top" id="back-to-top" type="button" aria-label="Повернутися нагору">↑</button>
+  <script src="script.js"></script>
+</body>
+</html>
